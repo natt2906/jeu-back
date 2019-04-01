@@ -24,7 +24,7 @@ document.getElementById("clickme2").addEventListener("click", function (event) {
 }, false);
 
 
-var socket = io.connect('https://blueberry-cobbler-17308.herokuapp.com');
+var socket = io.connect('https://jeu-back.herokuapp.com/');
         var laFonctionClick = function(){
             
             socket.emit('cube', document.querySelector('#cube1').style.left)
