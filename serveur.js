@@ -96,6 +96,8 @@ app.post('/index', function (req, res) {
 app.use(function (req, res) {
   res.status(404).send('ERROR 404');
 })
-server.listen(8080, function () {
-  console.log('Le serveur est disponible sur le port 8080');
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8080;
+}
+server.listen(port);
