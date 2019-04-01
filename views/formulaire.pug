@@ -1,0 +1,18 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+  link(rel='stylesheet' href='./css/style.css')
+  link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+  title Document
+body
+  #container2
+    h1 Identifiez Vous !
+    form(action='/index' method='POST')
+      .form-row
+        .col-md-4.mb-3
+          label(for='validationDefault01') Pseudo
+          input#validationDefault01.form-control(type='text' placeholder='' value='' required='' name='name')
+          button.btn.btn-primary(type='submit' value='Submit') Submit 
