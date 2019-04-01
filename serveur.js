@@ -1,7 +1,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var express = require('express');
 var app = express();
-var URL = 'mongodb://localhost:27017/backgame';
+var URL = 'mongodb://<dbuser>:<dbpassword>@ds157735.mlab.com:57735/heroku_2hhk567w';
 var bodyParser = require('body-parser');
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
@@ -67,7 +67,7 @@ app.post('/index', function (req, res) {
       if (err) {
         return;
       }
-      const db = client.db('backgame');
+      const db = client.db('heroku_2hhk567w');
       const collection = db.collection('users');
      collection.find({
         users: name
